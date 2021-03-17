@@ -1,0 +1,19 @@
+<section class="container px-4 py-24 mx-auto">
+  <div class="w-full mx-auto text-left md:w-11/12 xl:w-8/12 md:text-center">
+    <h1 class="mb-3 text-4xl font-bold leading-tight text-gray-900 md:text-5xl md:font-extrabold">
+      Welcome to Nonprofit Info
+    </h1>
+    <p class="mb-6 text-lg text-gray-600 md:text-xl">
+      Enter a link to an IRS form 990 here
+    </p>
+
+    <form phx-submit="process_form">
+      <label class="form-label">
+        <div class="form-append">
+          <input class="form-input" type="text" name="url" value="<%= @query %>" placeholder="" list="results" autocomplete="off"/>
+          <button type="submit" class="btn btn-dark" phx-disable-with="Processing">Submit</button>
+        </div>
+      </label>
+    </form>
+  </div>
+</section>
